@@ -1,4 +1,4 @@
-package ru.shareholder.core.presentation_layer.event
+package com.my.package
 
 /**
  * Вспомогательный класс для формирования event-like поведения у LiveData. LiveData используется для обработки
