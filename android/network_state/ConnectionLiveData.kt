@@ -25,6 +25,7 @@ class ConnectionLiveData(val context: Context) : LiveData<Boolean>() {
     override fun onActive() {
         super.onActive()
         postValue(isInternetAvailable(context))
+        // Если версия sdk > 23, можно убрать проверку
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {
             connectivityManager.registerDefaultNetworkCallback(
                 getConnectivityMarshmallowManagerCallback()
@@ -71,4 +72,3 @@ val connectionLiveData = ConnectionLiveData(requireContext())
         connectionLiveData.observe(viewLifecycleOwner) { isConnected ->
       }
     */
-// Если версия sdk > 23, можно убрать проверку в onActive
