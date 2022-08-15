@@ -71,3 +71,4 @@ val connectionLiveData = ConnectionLiveData(requireContext())
         connectionLiveData.observe(viewLifecycleOwner) { isConnected ->
       }
     */
+// Если версия sdk > 23, можно убрать проверку в onActive
